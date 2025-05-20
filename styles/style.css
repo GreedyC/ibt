@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+    background-color: #1a1a1a;
+    line-height: 1.6;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 5%;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    flex-wrap: wrap;
+}
+
+.header-content {
+    flex: 2;
+    max-width: 700px;
+    margin-right: 40px;
+}
+
+.header-content h1 {
+    font-size: 3.5em;
+    color: #5eff5e;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(94, 255, 94, 0.5);
+}
+
+.header-content h2 {
+    font-size: 1.8em;
+    color: #c0c0c0;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.header-content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+.profile-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+}
+
+.profile-image-container img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #5eff5e;
+    box-shadow: 0 0 20px rgba(94, 255, 94, 0.6);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-image-container img:hover {
+    transform: scale(1.05);
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #e0e0e0;
+    font-size: 2em;
+    margin-right: 25px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #5eff5e;
+    transform: translateY(-5px);
+}
+
+.about-me-section {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 60px 5%;
+    margin-top: 40px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me-section h3 {
+    font-size: 2.5em;
+    color: #5eff5e;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(94, 255, 94, 0.4);
+}
+
+.about-me-section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.contact-footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 30px 5%;
+    text-align: center;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5);
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #333;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-decoration: none;
+    overflow: hidden; /* Ensures image fits within circle */
+}
+
+.contact-circle img {
+    width: 70%; /* Adjust size of icon within the circle */
+    height: 70%;
+    object-fit: contain;
+    filter: invert(100%); /* Makes icons white on dark background */
+}
+
+.contact-circle:hover {
+    background-color: #5eff5e;
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(94, 255, 94, 0.8);
+}
+
+
+/* Basic Responsiveness */
+@media (max-width: 992px) {
+    .header-section {
+        flex-direction: column;
+        padding: 60px 5%;
+    }
+
+    .header-content {
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .profile-image-container {
+        margin-top: 30px;
+    }
+
+    .header-content h1 {
+        font-size: 2.8em;
+    }
+
+    .header-content h2 {
+        font-size: 1.5em;
+    }
+
+    .about-me-section {
+        padding: 40px 5%;
+    }
+
+    .about-me-section h3 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2.2em;
+    }
+
+    .header-content h2 {
+        font-size: 1.3em;
+    }
+
+    .profile-image-container img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-me-section p {
+        font-size: 1em;
+    }
+
+    .contact-icons {
+        gap: 20px;
+    }
+
+    .contact-circle {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-section {
+        padding: 40px 5%;
+    }
+
+    .header-content h1 {
+        font-size: 1.8em;
+    }
+
+    .header-content h2 {
+        font-size: 1.1em;
+    }
+
+    .social-links a {
+        font-size: 1.8em;
+        margin-right: 15px;
+    }
+}
